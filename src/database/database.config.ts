@@ -3,8 +3,6 @@ import * as path from 'path';
 import config from '../config/config';
 import { DatabaseNamingStrategy } from './database-naming.strategy';
 
-console.log(config.get('database.password'));
-
 export const typeOrmConfig: TypeOrmModuleOptions = {
   type: 'postgres',
   host: config.get('database.host'),
