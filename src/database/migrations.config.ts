@@ -12,7 +12,7 @@ export const dataSource = new DataSource({
   database: config.get('database.database'),
   entities: [path.join(__dirname, 'entities', '*.entity.{js,ts}')],
   migrations: [path.join(__dirname, 'migrations', '*.{js,ts}')],
-  synchronize: true,
+  synchronize: false,
   migrationsRun: true,
   namingStrategy: new DatabaseNamingStrategy(),
 });

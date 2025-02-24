@@ -18,7 +18,6 @@ interface CsvRow {
 export class CampaignReportMapper {
   async mapCsvToEntities(csvData: string): Promise<CampaignReportDto[]> {
     const rows: CsvRow[] = await neatCsv(csvData);
-
     return rows.map((row) => ({
       ...row,
       event_time: new Date(row.event_time),

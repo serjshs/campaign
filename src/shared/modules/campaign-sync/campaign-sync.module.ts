@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { CampaignSyncService } from './campaign-sync.service';
 import { HttpModule } from '@nestjs/axios';
+import { CampaignSyncService } from './campaign-sync.service';
 
 @Module({
   imports: [HttpModule],

@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron, CronExpression } from '@nestjs/schedule';
-import * as moment from 'moment';
+import moment from 'moment';
 import { EMPTY, from, Observable, of } from 'rxjs';
 import {
   expand,
@@ -111,8 +111,8 @@ export class CampaignReportSchedulerService {
 
   private getDateRange(): { from_date: string; to_date: string } {
     return {
-      from_date: moment().subtract(600, 'days').format('YYYY-MM-DD HH:mm:ss'),
-      to_date: moment().format('YYYY-MM-DD HH:mm:ss'),
+      from_date: moment().startOf('day').format('YYYY-MM-DD HH:mm:ss'),
+      to_date: moment().endOf('day').format('YYYY-MM-DD HH:mm:ss'),
     };
   }
 }

@@ -19,10 +19,10 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "ts-node ./node_modules/typeorm/cli",
-    "migration:run": "npx typeorm migration:run -d src/database/migrations.config.ts",
-    "migration:revert": "npx typeorm migration:revert -d src/database/migrations.config.ts",
-    "migration:generate": "npx typeorm migration:generate -d src/database/migrations.config.ts",
-    "migration:create": "npx typeorm migration:create src/database/migrations"
+    "migration:run": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:run -d src/database/migrations.config.ts",
+    "migration:revert": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:revert -d src/database/migrations.config.ts",
+    "migration:generate": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:generate -d src/database/migrations.config.ts",
+    "migration:create": "npx ts-node -r tsconfig-paths/register node_modules/typeorm/cli.js migration:create src/database/migrations"
   },
   "dependencies": {
     "@golevelup/profiguration": "^0.2.1",
@@ -44,8 +44,7 @@
     "pg": "^8.13.3",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
-    "swagger-ui-express": "^5.0.1",
-    "typeorm": "^0.3.20"
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -72,6 +71,8 @@
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "typeorm": "^0.3.20",
+    "typeorm-ts-node-commonjs": "^0.3.20",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.20.0"
   },
