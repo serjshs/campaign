@@ -21,7 +21,7 @@ const config = createProfiguration<Config>(
     },
     database: {
       host: {
-        default: 'campaign.postgres',
+        default: '',
         env: 'DATABASE_HOST',
       },
       port: {
