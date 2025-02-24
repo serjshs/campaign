@@ -200,7 +200,7 @@ docker-compose down -v
 
 💡 **Now your workspace is ready to use!** 🎉
 
-- [campaign.workspace](http://localhost:3000/)
+- [campaign.workspace](http://localhost:3000/api/docs)
 - [campaign.postgres](http://localhost:5432/)
 
 ---
