@@ -23,14 +23,11 @@ docker-compose --version
 
 ### **2️⃣ Clone the Repository**
 
-Clone this repository to your local machine:
+Clone this repository to your local machine and copy the `.env.workspace` file to `.env`:
 
 ```sh
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/serjshs/campaign.git && cd https://github.com/serjshs/campaign.git && cp .env.workspace .env
 ```
-
-Replace `<repository-url>` with the actual URL of the repository.
 
 ### **3️⃣ Add Containers to /etc/hosts**
 
