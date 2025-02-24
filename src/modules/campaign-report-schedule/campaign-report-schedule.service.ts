@@ -30,7 +30,7 @@ export class CampaignReportSchedulerService {
     private readonly campaignReportDao: CampaignReportDao,
   ) {}
 
-  @Cron(CronExpression.EVERY_MINUTE)
+  @Cron(CronExpression.EVERY_HOUR)
   fetchAndSaveCampaignReports(): void {
     this.logger.log('Fetching campaign reports...');
     from(Object.values(EventName))
